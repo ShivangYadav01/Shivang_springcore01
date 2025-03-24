@@ -14,10 +14,10 @@
 
 
 
-	<!-- <bean name="emp2" class="com.springcore.model.Employee">
+	 <bean name="emp2" class="com.springcore.model.Employee">
 	<constructor-arg name="id" value="112" />
 	<constructor-arg name="name" value="Ayush" />
 	<constructor-arg name="gender" value="Male" />
-	</bean> -->
+	</bean> 
 
 </beans>
