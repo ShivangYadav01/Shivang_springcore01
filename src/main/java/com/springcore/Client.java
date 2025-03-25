@@ -17,3 +17,4 @@ System.out.println(bean);//It is printing by calling setters.
 	}
 
 }
+  

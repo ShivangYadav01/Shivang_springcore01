@@ -13,6 +13,7 @@ public Address(String city, String state) {
 	super();
 	this.city = city;
 	this.state = state;
+	System.out.println("Adress.address()");
 }
 
 public String getCity() {
