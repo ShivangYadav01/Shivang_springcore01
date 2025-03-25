@@ -7,7 +7,7 @@ public class Client {
 
 	public static void main(String[] args) {
 		ApplicationContext ioc=new ClassPathXmlApplicationContext("applicationContext.xml");
-Employee bean =ioc.getBean("emp2",Employee.class);
+Employee bean =ioc.getBean("emp",Employee.class);
 System.out.println(bean);//It is printing by calling setters.
 
 
