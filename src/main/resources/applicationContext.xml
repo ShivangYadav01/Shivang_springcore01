@@ -11,6 +11,8 @@
 	</bean>
  
  
+ 
+ 
 	<!--bean name="emp" class="com.springcore.model.Employee" autowire="byType"> Scope can be used to give scope to a bean -by default it is
 	 singleton and  we can convert it to "prototype"
 	-->
@@ -21,13 +23,10 @@
  	<property name="address">
  	<bean class="com.springcore.model.Address">
  	<property name="city" value="Lucknow"/>
- 	<property name="state" value="UP"/>
- 	
- 	
+ 	<property name="state" value="UP"/>	
  	</bean>
  	</property>
 	</bean>
-
 
 
 	<!--> <bean name="emp2" class="com.springcore.model.Employee">
@@ -35,5 +34,18 @@
 	<constructor-arg name="name" value="Ayush" />
 	<constructor-arg name="gender" value="Male" />
 	</bean> -->
+	
+	
+	<!-- <bean id="empBean11"
+		class="spring_core.dpInjectPro.Entity.Employee" autowire="byName">
+		<property name="name" value="Guest1" />
+		<property name="id" value="101" />
+	</bean>
+
+	<bean id="address" class="spring_core.dpInjectPro.Entity.Address">
+		<property name="street" value="dharawi" />
+		<property name="city" value="Mumbai" />
+	</bean>-->
+	
 
 </beans>
