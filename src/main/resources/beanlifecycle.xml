@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="address1" class="com.springcore.model.Address" scope="prototype">
+<property name="city" value="Ghaziabad"/>
+<property name="state" value="UP"/>
+</bean>
+
+<bean id="emp3" class="com.springcore.model.Employee2" init-method="xmlInitMethod" destroy-method="xmlDestroyMethod">
+<property name="name" value="Mohit"/>
+<property name="age" value="30"/>
+<property name="salary" value="32000"/>
+
+</bean>
+
+
+
+</beans>
