@@ -1,9 +1,14 @@
 package com.springcore.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+
+@Scope(value="prototype")
+
 public class Employee {
 	private int id;
 	private String name;
@@ -56,14 +61,14 @@ public class Employee {
 	}
 @Autowired
 	public void setAddress(Address address) {
-		System.out.println("Employee.setAdress()");
+		System.out.println("Employee.setAddress()");
 		this.address = address;
 	}
-
-	@Override
+//
+ @Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + "]";
-	}
+		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + "]";	
+		}
 	
 	
  

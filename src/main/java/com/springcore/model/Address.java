@@ -1,8 +1,10 @@
 package com.springcore.model;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component(value="address")
+@Primary
 
 public class Address {
 

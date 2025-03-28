@@ -12,7 +12,13 @@ public class Client {
 	public static void main(String[] args) {
 		ApplicationContext ioc=new AnnotationConfigApplicationContext("com.springcore");
 	Employee emp =ioc.getBean("employee",Employee.class);
-	emp.setName("Kunal");
+	//emp.setName("Kunal");
+	System.out.print(emp);
+	 emp =ioc.getBean("employee",Employee.class);
+	//emp.setName("Kunal");
+	System.out.print(emp);
+	emp =ioc.getBean("employee",Employee.class);
+	//emp.setName("Kunal");
 	System.out.print(emp);
 
 
