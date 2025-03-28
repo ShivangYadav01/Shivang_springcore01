@@ -14,6 +14,7 @@ public class Employee2 implements InitializingBean, DisposableBean{
 	private Address address;
 	
 @Override
+//They are java methods faster than xml_init and xml_destroy which are automatically called 
 	public void afterPropertiesSet() throws Exception{
 		System.out.println("Employee6.afterPropertiesSet()");
 	}
