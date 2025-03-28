@@ -4,48 +4,22 @@
 	xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<!-- bean definitions here -->
-	<bean name="add" class="com.springcore.model.Address">
-	<property name="city" value ="Noida"/>
-	<property name ="state" value="UP"/>
-	</bean>
- 
- 
- 
- 
-	<!--bean name="emp" class="com.springcore.model.Employee" autowire="byType"> Scope can be used to give scope to a bean -by default it is
-	 singleton and  we can convert it to "prototype"
-	-->
-	<bean name="emp" class="com.springcore.model.Employee" autowire="byType">
-		<property name="id" value="111" />
-		<property name="name" value="Guest" />
-		<property name="gender" value="Male" />
- 	<property name="address">
- 	<bean class="com.springcore.model.Address">
- 	<property name="city" value="Lucknow"/>
- 	<property name="state" value="UP"/>	
- 	</bean>
- 	</property>
-	</bean>
+<bean id="ds"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://localhost:3306/shivang"/>
+		<property name="username" value="root"/>
+		<property name="password" value="root"/>
+		</bean>
 
-
-	<!--> <bean name="emp2" class="com.springcore.model.Employee">
-	<constructor-arg name="id" value="112" />
-	<constructor-arg name="name" value="Ayush" />
-	<constructor-arg name="gender" value="Male" />
-	</bean> -->
 	
-	
-	<!-- <bean id="empBean11"
-		class="spring_core.dpInjectPro.Entity.Employee" autowire="byName">
-		<property name="name" value="Guest1" />
-		<property name="id" value="101" />
-	</bean>
+		<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="ds"></property>
+</bean>
 
-	<bean id="address" class="spring_core.dpInjectPro.Entity.Address">
-		<property name="street" value="dharawi" />
-		<property name="city" value="Mumbai" />
-	</bean>-->
+<bean id="edao" class="com.springcore.jdbctemplate.EmployeeDao">
+<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+ </bean>
 	
 
 </beans>
